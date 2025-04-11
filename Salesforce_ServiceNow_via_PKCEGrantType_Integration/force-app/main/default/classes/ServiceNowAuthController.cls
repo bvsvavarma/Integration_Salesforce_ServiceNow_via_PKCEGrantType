@@ -7,7 +7,6 @@ public with sharing class ServiceNowAuthController {
     public static String TOKEN_ENDPOINT = 'https://dev318094.service-now.com/oauth_token.do';
     public static String INCIDENT_ENDPOINT = 'https://dev318094.service-now.com/api/now/table/incident?sysparm_query=priority=1&sysparm_limit=10';
 
-    ///sys_journal_field?sysparm_limit=100&element_id=a79d926cdb234010e6e80d53ca9619fe"
     @AuraEnabled
     public static String fetchAuthUrl(){
         //Creating Code Challange
