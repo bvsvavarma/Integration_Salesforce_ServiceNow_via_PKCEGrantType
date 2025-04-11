@@ -1,0 +1,16 @@
+<apex:page>
+    <script>
+        window.onload = onLoad();
+
+        function onLoad(){
+            //strippting the code from vf page
+            const code = getUrlParamValue(window.location.href, 'code');
+            //redirecting to lighningpage from VF Page with appending name space before code c__
+            location.href = '/lightning/n/Service_Now_Initiator?c__code=' + code;
+        }
+
+        function getUrlParamValue(url, key){
+            return new URL(url).searchParams.get(key);
+        }
+    </script>
+</apex:page>
